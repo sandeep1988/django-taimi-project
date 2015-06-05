@@ -1,0 +1,1 @@
+$(document).ready(function(){$('#wizard').smartWizard({onFinish:onFinishCallback});});function onFinishCallback(objs,context){$('#frmCalculator').submit();}

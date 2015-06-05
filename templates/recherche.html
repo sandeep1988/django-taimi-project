@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load nouvelles_tags %}
+{% load menu_tags cms_tags sekizai_tags i18n %}
+
+
+{% block content %}
+		<h3 class="pageTitle">
+			{% trans "Search" %}
+
+		</h3>
+		<table class="table table-bordered table-striped" id="sortedtable">
+				<thead>
+					<tr>
+						<th>{% trans "Category" %}</th>
+						<th>part_no</th>
+						<th>a</th>
+						<th>b</th>
+						<th>p1</th>
+						<th>p2</th>
+						<th>h1</th>
+						<th>h2</th>
+						<th>seal_kit</th>
+					</tr>
+				</thead>
+				<tbody>
+			  		{% for product in products %}
+						<tr>
+							<td>{{ product.subcategory.title }}</td>
+							<td>{{ product.part_no }}</td>
+							<td>{{ product.a }}</td>
+							<td>{{ product.b }}</td>
+							<td>{{ product.p1 }}</td>
+							<td>{{ product.p2 }}</td>
+							<td>{{ product.h1 }}</td>
+							<td>{{ product.h2 }}</td>
+							<td>{{ product.seal_kit }}</td>
+						</tr>				
+					{% endfor %}
+				</tbody>
+		</table>
+	</div>
+	{% addtoblock "js" %}
+	<script>
+		$(document).ready(function() {
+    		$('#sortedtable').dataTable( {
+						"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+						"bPaginate": false,
+						"bFilter": false,
+						"bInfo": false
+					});
+			$.extend( $.fn.dataTableExt.oStdClasses, {
+    			"sWrapper": "dataTables_wrapper form-inline"
+			});
+		});
+		
+	</script>
+	{% endaddtoblock %}
+	{% endblock %}

@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+{% load menu_tags cms_tags sekizai_tags i18n %}
+{% load thumbnail %}
+
+
+{% block content %}
+		<h2 class="pageTitle">
+			{{ request.current_page.get_menu_title }}
+		</h2>
+		<div class="row">
+			<div class="span3">
+				<ul id="servicesTab" class="nav nav-list sidenav">
+					{% show_menu 1 100 0 100 "menu/sub_menu_products.html" %}
+				</ul>
+			</div>
+			<div class="span9">
+				{% if request.current_page.pk %}
+					{% placeholder "content2" %}
+				{% endif %}
+				
+				{% if products %}
+				
+					{% if not cat %}
+					
+						{% if products.0.subcategory.category.image %}
+							<img src="{{ MEDIA_URL }}{{ products.0.subcategory.category.image }}" class="sub-categorie-image rounded-corner-img"/>
+						{% endif %}
+						
+
+						<h3>{{ products.0.subcategory.title }}</h3>
+						
+						
+						{% if products.0.subcategory.image %}
+							<div class="well">
+								<img style="" src="{{ MEDIA_URL }}{{ products.0.subcategory.image }}" class="swivel-image rounded-corner-img"/>
+								{% if products.0.subcategory.description %}{{ products.0.subcategory.description }}{% endif %}
+							</div>
+						{% endif %}
+				
+						<!--<div class="well">	-->
+							
+							<h4>{% trans "Create an inquiry basket to get prices and information" %}</h4>
+				
+							<p>{% blocktrans %}To request prices or technical information for specific products, click on the + sign at the right side of the table. The products will be added to your inquiry basket. When you are done, click on <a href="/produits/listinfo/">Information request</a>  on top right of the page. We will get back to you shortly with all the information you need.{% endblocktrans %}</p>
+							
+							<table class="table table-bordered table-striped" id="sortedtable" style="font-size:12px">
+							<thead>
+								<tr>
+									{% if products.0.image %}
+										<th>Image</th>
+									{% endif %}
+									
+									{% if products.0.part_no %}
+										<th>Part. #</th>
+									{% endif %}
+									
+									{% if products.0.reference %}
+										<th>Referer</th>
+									{% endif %}
+									
+									{% if products.0.a %}
+										<th>A</th>
+									{% endif %}
+									
+									{% if products.0.b %}
+										<th>B</th>
+									{% endif %}
+									
+									{% if products.0.c %}
+										<th>C</th>
+									{% endif %}
+									
+									{% if products.0.p1 %}
+										<th>P1</th>
+									{% endif %}
+									
+									{% if products.0.p2 %}
+										<th>P2</th>
+									{% endif %}
+									
+									{% if products.0.h1 %}
+										<th>H1</th>
+									{% endif %}
+									
+									{% if products.0.h2 %}
+										<th>H2</th>
+									{% endif %}
+									
+									{% if products.0.seal_kit %}
+										<th>SEAL_KIT</th>
+									{% endif %}
+									
+									{% if products.0.ports %}
+										<th>PORTS</th>
+									{% endif %}
+									
+									{% if products.0.weight %}
+										<th>WEIGHT</th>
+									{% endif %}
+									
+									{% if products.0.online_video %}
+										<th>VIDEO</th>
+									{% endif %}
+									
+									<th>{% trans "INFO" %}</th>
+								</tr>
+							</thead>
+							<tbody>
+				  				{% for product in products %}
+									{% if product.part_no %}
+									<tr>
+										
+										{% if products.0.image %}
+											{% thumbnail product.image "100x100" as im %}
+    											<td style="text-align: center">
+    												<a href="{{ MEDIA_URL }}{{ product.image }}" rel="lightbox" title="{{ product.part_no }}">
+    													<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+    												</a><br/>
+    												<a href="{{ MEDIA_URL }}{{ product.image }}" rel="lightbox" title="{{ product.part_no }}">Zoom</a>
+    											</td>
+											{% endthumbnail %}
+										{% endif %}
+										
+										{% if products.0.part_no %}
+											<td style="width:100px;">{{ product.part_no }}</td>
+										{% endif %}
+										
+										{% if products.0.reference %}
+											<td style="width:250px;">{{ product.reference }}</td>
+										{% endif %}
+										
+										{% if products.0.a %}
+											<td>{{ product.a }}</td>
+										{% endif %}
+										
+										{% if products.0.b %}
+											<td>{{ product.b }}</td>
+										{% endif %}
+										
+										{% if products.0.c %}
+											<td>{{ product.c }}</td>
+										{% endif %}
+										
+										{% if products.0.p1 %}
+											<td>{{ product.p1 }}</td>
+										{% endif %}
+										
+										{% if products.0.p2 %}
+											<td>{{ product.p2 }}</td>
+										{% endif %}
+										
+										{% if products.0.h1 %}
+											<td>{{ product.h1 }}</td>
+										{% endif %}
+										
+										{% if products.0.h2 %}
+											<td>{{ product.h2 }}</td>
+										{% endif %}
+										
+										{% if products.0.seal_kit %}
+											<td>{{ product.seal_kit }}</td>
+										{% endif %}
+										
+										{% if products.0.ports %}
+											<td style="width:110px">{{ product.ports|safe }}</td>
+										{% endif %}
+										
+										{% if products.0.weight %}
+											<td style="width:70px">{{ product.weight }}</td>
+										{% endif %}
+										
+										{% if products.0.online_video %}
+											<td>{% if product.online_video %}<a href="{{ product.online_video }}" target="_blank">Video</a>{% endif %}</td>
+										{% endif %}
+										
+                                		<td align="center"><a class="addInfo" pid="{{ product.id }}" style="font-size: 20px"  href="#">+</a></td>
+									</tr>
+									{% endif %}				
+								{% endfor %}
+							</tbody>
+							</table>
+
+						<!--</div>-->
+						
+					{% else %}
+					
+						{% if cat.image %}<img src="{{ MEDIA_URL }}{{ cat.image }}" class="sub-categorie-image rounded-corner-img"/>{% endif %}
+						<div class="cat-produit">
+						{% if cat.description %}{{ cat.description|safe }}{% endif %}
+						</div>
+						
+					{% endif %}
+					
+					{% if cat.title %}
+					
+						<h3>{{ cat.title }}</h3>
+						
+					{% endif %}
+
+                {% if subcats %}
+
+                	<ul class="subcats">
+                    {% for subcat in subcats %}
+                    	<li><a href="{{ subcat.get_url }}">{{ subcat.title }}</a></li>
+                    {% endfor %}
+                    </ul>
+                    {% thumbnail cat.image2 "350x200" crop="center" as im %}
+    						<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+					{% endthumbnail %}
+                {% endif %}
+				{% endif %}
+			</div>
+		</div>
+		{% addtoblock 'js' %}
+			<script>
+				$(document).ready(function() {
+					$('#sortedtable').dataTable( {
+						"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+						"bPaginate": false,
+						"bFilter": false,
+						"bInfo": false
+					});
+					$.extend( $.fn.dataTableExt.oStdClasses, {
+						"sWrapper": "dataTables_wrapper form-inline"
+					});
+				});
+                $('.addInfo').click(function(){
+                        $('.message').load("/produits/addinfo/"+$(this).attr('pid'), function(){ $('.message').show(); });                
+                    });
+		
+			</script>
+		{% endaddtoblock %}
+
+{% endblock %}

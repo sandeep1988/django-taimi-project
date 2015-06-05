@@ -1,0 +1,30 @@
+{% load i18n %}
+<b>Nom:</b> {{ nom }}<br />
+<b>Courriel:</b> {{ courriel }}<br />
+<b>Country:</b> {{ country }}<br />
+<b>Postal Code:</b> {{ postal_code }}<br />
+<b>Message:</b> {{ message }}<br />
+<table>
+    <thead>
+                        <tr>
+                            <th>Part. #</th>
+                            <th>{% trans "Category" %}</th>
+                            <th>{% trans "Sub-Category" %}</th>
+                            <th>SEAL_KIT</th>
+                            <th>{% trans "Info. Request" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          {% for product in products %}
+                            {% if product.a %}
+                            <tr id="row_{{ product.id }}">
+                                <td>{{ product.part_no }}</td>
+                                <td>{{ product.subcategory.category.title }}</td>
+                                <td>{{ product.subcategory.title }}</td>
+                                <td>{{ product.seal_kit }}</td>
+                                <td><a class="addInfo" pid="{{ product.id }}" href="#">-</a></td>
+                            </tr>
+                            {% endif %}                
+                        {% endfor %}
+                    </tbody>
+</table>

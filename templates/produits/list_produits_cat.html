@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load produits_tags menu_tags cms_tags i18n %}
+
+{% block content %}
+<div class="row">
+    <div class="span4">
+
+        {% include "produits/side_bar.html" %}
+
+    </div>
+    <div class="span8 clearfix">
+
+        <h1 class="pageTitle">{{ cat.title }}</h1>
+
+        <div class="produits-desc">
+
+            <img src="{{ STATIC_URL }}{{ cat.image }}" alt="{{ cat.title }}" class="rounded-corner-img" style="float: left; margin-right: 10px;"/>
+
+			{{ cat.description|safe }}   
+
+        </div>
+
+        <hr/>
+        
+        <div class="btn-group" style="float: left;">
+            <button class="btn btn-warning">
+                {% trans "Choose your type of" %} {{ cat.title }} ->
+            </button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" style="text-align: left; padding: 10px;">
+                {% product_subcat_list cat.id %}
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

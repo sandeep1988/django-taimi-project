@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load menu_tags cms_tags %}
+
+{% block content %}
+
+<div class="row">
+	<div class="span4">
+		<ul id="servicesTab" class="nav nav-list sidenav">
+			<li{% if request.current_page.id == 3 %} class="active"{% endif %}>
+				<a href="/about/"><i class="icon-chevron-right"></i><i class="icon-cogs"></i>{% page_attribute "title" "about" %}</a>
+				</li>
+				{% show_menu_below_id "about" 0 100 100 100 "menu/sub_menu_about.html" %}
+		</ul>
+	</div>
+	<div class="span8">
+
+		<h1 class="pageTitle">{% page_attribute "page_title" %}</h1>
+
+		{% placeholder "content_about" %}
+	</div>
+</div>
+
+{% endblock %}

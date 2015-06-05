@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load i18n menu_tags sekizai_tags %}
+{% load cms_tags %}
+
+{% block content %}
+
+<script type="text/javascript">
+    function SetSwivelsAmerica() {
+        document.getElementById('heavy-duty').style.display = '';
+        document.getElementById('ball-needle').style.display = 'none';
+        document.getElementById('ball-bearing').style.display = '';
+    }
+
+    function SetSwivelsEurope() {
+        document.getElementById('heavy-duty').style.display = 'none';
+        document.getElementById('ball-needle').style.display = '';
+        
+        if ($('input#equipment-rotation').is(':checked')) {
+            document.getElementById('ball-bearing').style.display = 'none';
+        }
+        
+    }
+</script>
+
+<h2 class="pageTitle" style="color:#333;margin-bottom:5px;font-size:24px;">{% trans "Got equipment using hydraulics and swivels?" %}</h2>
+<p><span style="color:#f56f02;font-size: 22px;">{% trans "Reduce the costs of swivel replacement, increase hose life and increase your bottom line." %}</span></p>
+
+<div class="row">
+	<div class="span12">
+		<img alt="" src="{{ STATIC_URL }}img/impulse-test-swivels.jpg" style="width: 200px; height:auto; margin-right: 40px;" />
+		<img alt="" src="{{ STATIC_URL }}img/swivels.png" style="width: 300px; height:auto;" />
+	</div>
+</div>
+
+<div class="row">
+	<div class="span12" style="margin-top:16px;">
+		<p>{% blocktrans %}Taimi Swivels are the toughest out there. An independent lab test proved our years of field history results right:
+	 		Taimi swivels will far outlast any other swivel on the market.{% endblocktrans %}</p>
+		<p>{% blocktrans %}The cost of ownership of a Taimi swivel is the lowest compared to any other swivel. 
+			Acquisition cost, although higher, is not the most important part of the equation. Taimi swivels are the cheapest swivels &lsquo;by the hour&rsquo; on the market today.{% endblocktrans %}</p>
+	</div>
+</div>
+
+<div class="row" style="margin:20px 0;">
+	<span style="color:#f56f02;font-size: 22px;">{% trans "See how much you can save by switching to Taimi Swivels" %}</span>
+</div>
+
+<div class="row">
+	<div id="calculator-wrapper" class="span12">
+	    <form action="/calculator/" method="post" id="frmCalculator">
+	        {% csrf_token %}
+	        <div class="row">
+	            <div class="span12">
+	                <div id="wizard" class="swMain">
+	                    <ul>
+	                        <li>
+	                            <a href="#step-1"> <label class="stepNumber">1</label> <span class="stepDesc"> {% trans "Step 1" %}
+	                                <br />
+	                                <small>{% trans "Equipment" %}</small> </span> </a>
+	                        </li>
+	                        <li>
+	                            <a href="#step-2"> <label class="stepNumber">2</label> <span class="stepDesc"> {% trans "Step 2" %}
+	                                <br />
+	                                <small>{% trans "Location" %}</small> </span> </a>
+	                        </li>
+	                        <li>
+	                            <a href="#step-3"> <label class="stepNumber">3</label> <span class="stepDesc"> {% trans "Step 3" %}
+	                                <br />
+	                                <small>{% trans "Type of swivels" %}</small> </span> </a>
+	                        </li>
+	                        <li>
+	                            <a href="#step-4"> <label class="stepNumber">4</label> <span class="stepDesc"> {% trans "Step 4" %}
+	                                <br />
+	                                <small>{% trans "Hours worked by years" %}</small> </span> </a>
+	                        </li>
+	                    </ul>
+	                    <div id="step-1">
+	                        <h2 class="StepTitle">{% trans "Select your equipment" %}</h2>
+	
+	                        <ul class="step-list">
+	                            <li>
+	                                <input type="radio" name="equipment" value="harvester" checked/>
+	                                &nbsp;&nbsp;{% trans "Harvester/Processor Head" %}
+	                            </li>
+	                            <li>
+	                                <input type="radio" name="equipment" value="rotation" id="equipment-rotation"/>
+	                                &nbsp;&nbsp;{% trans "High Rotation Disc Saw Felling Head" %}
+	                            </li>
+	                            <li>
+	                                <input type="radio" name="equipment" value="other" onclick="alert('{% trans "If you operate equipment with high hose movement, you could save big time by using Taimi Swivels. We invite you to visit our website. Check out our product range and get in touch with us." %}'); return false;"/>
+	                                &nbsp;&nbsp;{% trans "Other" %}
+	                            </li>
+	                        </ul>
+	
+	                    </div>
+	                    <div id="step-2">
+	                        <h2 class="StepTitle">{% trans "Select your location" %}</h2>
+	                        <ul class="step-list">
+	                            <li>
+	                                <input type="radio" name="location" value="america" checked onchange="SetSwivelsAmerica()"/>
+	                                &nbsp;&nbsp;{% trans "America" %}
+	                            </li>
+	                            <li>
+	                                <input type="radio" name="location" value="europe" onchange="SetSwivelsEurope()"/>
+	                                &nbsp;&nbsp;{% trans "Europe" %}
+	                            </li>
+	                        </ul>
+	
+	                    </div>
+	                    <div id="step-3">
+	                        <h2 class="StepTitle">{% trans "What type of swivels do you currently use?" %}</h2>
+	                        <ul class="step-list">
+	                            <li>
+	                                <input type="radio" name="swivels_type" value="none" checked/>
+	                                &nbsp;&nbsp;{% trans "None" %}
+	                            </li>
+	                            <li id="ball-bearing">
+	                                <input type="radio" name="swivels_type" value="ball" />
+	                                &nbsp;&nbsp;{% trans "Ball Bearing Swivels" %}
+	                            </li>
+	                            <li id="heavy-duty">
+	                                <input type="radio" name="swivels_type" value="heavy"/>
+	                                &nbsp;&nbsp;{% trans "Heavy Duty Ball Bearing Swivels" %}
+	                            </li>
+	                            <li id="ball-needle" style="display: none">
+	                                <input type="radio" name="swivels_type" value="needle"/>
+	                                &nbsp;&nbsp;{% trans "Ball + Needle Bearing Swivels" %}
+	                            </li>
+	                            <li>
+	                                <input type="radio" name="swivels_type" value="dontknow"/>
+	                                &nbsp;&nbsp;{% trans "I don’t know which type I’m using" %}
+	                            </li>
+	
+	                        </ul>
+	                    </div>
+	                    <div id="step-4">
+	                        <h2 class="StepTitle">{% trans "Enter hours worked per year" %}</h2>
+	                        <div id="hours">
+	                            <b>{% trans "Hours worked by year:" %}</b>&nbsp;&nbsp;
+	                            <input type="text" name="hours_worked" value="2000" style="width: 60px;"/>
+	                            <br>
+	                            <br>
+	                            <p>
+	                                {% trans "Click Calculate button to see how much you can save by switching to Taimi Swivels." %}
+	                            </p>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	            </div>
+	
+	        </div>
+	    </form>
+
+   {% include "calculator_rules.html" %}
+
+	</div>
+</div>
+{% addtoblock "js" %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Smart Wizard
+        $('#wizard').smartWizard({
+            onFinish : onFinishCallback,
+		    labelNext:'{% trans "Next" %}',
+		    labelPrevious:'{% trans "Previous" %}',
+		    labelFinish:'{% trans "Calculate" %}'
+        });
+
+    });
+
+    function onFinishCallback(objs, context) {
+
+        $('#frmCalculator').submit();
+
+    }
+
+</script>
+{% endaddtoblock %}
+
+{% endblock %}

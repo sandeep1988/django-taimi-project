@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load menu_tags cms_tags %}
+
+
+{% block content %}
+
+		<h3 class="pageTitle">
+			{% page_attribute "title" %}
+		</h3>
+		<div class="row">
+			<div class="span4">
+				<ul id="servicesTab" class="nav nav-list sidenav">
+					{% show_menu 1 0 0 100 "menu/sub_menu_about.html" %}
+				</ul>
+			</div>
+			<div class="span8">
+				<div id=servicesTabContent" class="tab-content">
+					
+					{% placeholder "Content" %}
+					
+				</div>
+			</div>
+		</div>
+		
+{% endblock %}

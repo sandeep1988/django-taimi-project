@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load produits_tags i18n menu_tags cms_tags sekizai_tags thumbnail %}
+
+{% block content %}
+<div class="row">
+    <div class="span4">
+
+        {% include "produits/side_bar.html" %}
+
+    </div>
+    <div class="span8">
+
+        <h1 class="pageTitle">{{ page_title|safe }}</h1>
+
+        <div class="produits-desc clearfix" style="margin-bottom:20px;">
+
+            <img src="{{ STATIC_URL }}{{ products.0.subcategory.category.image }}" alt="{{ products.0.subcategory.category.title }}" class="rounded-corner-img" style="float: left; margin-right: 10px;"/>
+			
+			{{ products.0.subcategory.category.description|safe }}
+
+        </div>
+
+        
+		{% if products.0.subcategory.image %}
+		<div class="well">
+			<img style="" src="{{ MEDIA_URL }}{{ products.0.subcategory.image }}" class="swivel-image rounded-corner-img"/>
+			{% if products.0.subcategory.description %}{{ products.0.subcategory.description }}{% endif %}
+		</div>
+		{% endif %}
+
+
+        <div>
+            <p>
+                {% blocktrans %}To request prices or technical information for specific products, click on the + sign at the right side of the table.
+                The products will be added to your inquiry basket. When you are done, click on{% endblocktrans %} <a href="/swivels/listinfo/">{% trans "Information request" %}</a>.
+                {% trans "We will get back by email to you shortly with all the information you need." %}
+            </p>    
+
+            <table class="table table-bordered table-striped" id="sortedtable" style="width:100%;font-size:12px">
+                <thead>
+                    <tr>
+                        <th>{% trans "Image" %}</th>
+                        <th>{% trans "Part. #" %}</th>
+                        <th>A</th>
+                        <th>B</th>
+                        <th>C</th>
+                        <th>{% trans "PORTS" %}</th>
+                        <th>{% trans "WEIGHT" %}</th>
+                        <th>{% trans "VIDEO" %}</th>
+                        <th>{% trans "INFO" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    {% if product.part_no %}
+                    <tr>
+                    	{% if product.image %}
+	                        {% thumbnail product.image "100x100" as im %}
+	                        <td style="text-align: center"><a href="{{ MEDIA_URL }}{{ product.image }}" rel="lightbox" title="{{ product.part_no }}"> <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"> </a>
+	                        <br/>
+	                        <a href="{{ MEDIA_URL }}{{ product.image }}" rel="lightbox" title="{{ product.part_no }}">Zoom</a></td>
+	                        {% endthumbnail %}
+                        {% else %}
+                        	<td>&nbsp;</td>
+                        {% endif %}
+                        <td style="width:100px;">{{ product.part_no }}</td>
+                        <td>{{ product.a }}</td>
+                        <td>{{ product.b }}</td>
+                        <td>{{ product.c }}</td>
+                        <td>
+                        	{% if product.p1 %}{{ product.p1 }}</br>{% endif %}
+                        	{% if product.p2 %}{{ product.p2 }}</br>{% endif %}
+                        	{% if product.p3 %}{{ product.p3 }}{% endif %}
+                        </td>
+                        <td>{% if product.weight %}{{ product.weight }}{% endif %}</td>
+                        <td>{% if product.online_video %}<a href="{{ product.online_video }}" target="_blank">{% trans "Video" %}</a>{% endif %}</td>
+                        <td align="center"><a class="btn btn-small btn-warning addInfo" pid="{{ product.id }}" style="font-size: 20px" href="#">+</a></td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+        
+        {% addtoblock 'js' %}
+            <script>
+                $(document).ready(function() {
+                    $('#sortedtable').dataTable( {
+                        "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+                        "bPaginate": false,
+                        "bFilter": false,
+                        "bInfo": false
+                    });
+                    $.extend( $.fn.dataTableExt.oStdClasses, {
+                        "sWrapper": "dataTables_wrapper form-inline"
+                    });
+                });
+                $('.addInfo').click(function(){
+			        $('.message').load("{% page_url 23 %}addinfo/"+$(this).attr('pid')+"/", function(){ $('.message').show(); });            
+                });
+        
+            </script>
+        {% endaddtoblock %}
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,750 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-26 16:51-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: client.py:4 templates/index.html:13 templates/index.html.py:23
+#: templates/index.html:32
+msgid "Taimi Hydraulics"
+msgstr "Taimi Hydraulique"
+
+#: apps/nouvelles/cms_app.py:7
+msgid "Nouvelles"
+msgstr "Nouvelles"
+
+#: apps/nouvelles/forms.py:16
+msgid "First name:"
+msgstr "Prénom:"
+
+#: apps/nouvelles/forms.py:22
+msgid "Last name:"
+msgstr "Nom:"
+
+#: apps/nouvelles/forms.py:28
+msgid "Email:"
+msgstr "Courriel:"
+
+#: apps/nouvelles/forms.py:42
+msgid "Subscribe"
+msgstr "S'inscrire"
+
+#: apps/nouvelles/forms.py:50
+msgid "Invalid email!"
+msgstr "Courriel invalide!"
+
+#: apps/nouvelles/views.py:43
+msgid "Success!"
+msgstr "Succès!"
+
+#: apps/nouvelles/views.py:43
+msgid "Thank you for subscribing!"
+msgstr "Merci pour votre inscription!"
+
+#: apps/nouvelles/views.py:46 apps/nouvelles/views.py:49
+msgid "Error!"
+msgstr "Erreur!"
+
+#: apps/nouvelles/views.py:46 apps/nouvelles/views.py:49
+msgid "An error has occured: "
+msgstr "Une erreur est survenue: "
+
+#: apps/produits/cms_app.py:7
+msgid "Produits"
+msgstr "Produits"
+
+#: apps/produits/menu.py:9
+msgid "Swivels"
+msgstr "Swivels"
+
+#: apps/produits/views.py:66
+msgid "Product already in your information request"
+msgstr "Produit déjà dans votre requête d'information"
+
+#: apps/produits/views.py:69
+msgid ""
+"Product successfully added to your information request, click <a href=\"/en/"
+"swivels/listinfo/\">here</a> to see your request."
+msgstr ""
+"Produit ajouté à votre demande d'informations, cliquez <a href=\"/fr/swivels/"
+"listinfo/\">ici</a> pour la voir."
+
+#: apps/produits/views.py:77
+msgid "Product successfully removed from your information request"
+msgstr "Produit supprimé de la requête d'information"
+
+#: apps/taimi_calculator/cms_app.py:6
+msgid "Calculator"
+msgstr "Calculatrice"
+
+#: apps/testimonies/cms_plugins.py:8
+msgid "Testimonies List"
+msgstr "Liste des témoignages"
+
+#: templates/advantages.html:7
+msgid "Advantages of using Taimi products"
+msgstr "Avantages d'utiliser les produits Taimi"
+
+#: templates/base.html:74 templates/recherche.html:8
+msgid "Search"
+msgstr "Rechercher"
+
+#: templates/base.html:81 templates/produits/produit_detail.html:35
+msgid "Information request"
+msgstr "Demande d'information"
+
+#: templates/base.html:108
+msgid "Quick links"
+msgstr "Liens rapides"
+
+#: templates/base.html:115 templates/results_calculator.html:18
+msgid "Newsletter"
+msgstr "Infolettre"
+
+#: templates/base.html:117 templates/results_calculator.html:20
+msgid ""
+"Subscribe to our newsletter and keep up to date 3 times a year with latest "
+"testimonies, promotions, innovations and news from Taimi Hydraulics."
+msgstr ""
+"Inscrivez-vous à notre bulletin pour demeurer au fait des derniers "
+"développements chez Taimi"
+
+#: templates/base.html:124
+msgid "Contact"
+msgstr "Contacts"
+
+#: templates/base.html:148
+msgid "Copyright"
+msgstr "Tous droits réservés"
+
+#: templates/base.html:157
+msgid "Creation of"
+msgstr "Conception de"
+
+#: templates/calculator_rules.html:4
+msgid "About this calculator"
+msgstr "À propos de ce calculateur"
+
+#: templates/calculator_rules.html:6
+msgid "Cost of swivels and hoses is based on average published list prices."
+msgstr ""
+
+#: templates/calculator_rules.html:8
+msgid ""
+"For the purpose of this calculator, a harvester head has 2 x 1\" lines and 2 "
+"x 3/4'' lines, and a disc saw felling head has 5 x 3/4'' lines and 2 x 1'' "
+"lines."
+msgstr ""
+
+#: templates/calculator_rules.html:10
+msgid ""
+"It is estimated that replacing a hose on logging equipment will cause a 15 "
+"minute downtime on average at $200, or €200 per hour."
+msgstr ""
+
+#: templates/calculator_rules.html:12
+msgid ""
+"It is estimated that 0.25 gallons of oil is lost every time a hose is "
+"replaced. Price of hydraulic oil is estimated at $15 per gallon, or €8 per "
+"litre."
+msgstr ""
+
+#: templates/calculator_rules.html:14
+msgid ""
+"Cost of hose replacement due to twisting and wear is estimated at $0.50 or  "
+"€0.50 per hose, per hour without swivels, and $.10, or  €0.10 per  hour,per "
+"hose with swivels."
+msgstr ""
+
+#: templates/calculator_rules.html:18
+msgid ""
+"This calculator is only intended to help users understand how various "
+"hydraulic setups can increase or decrease operation costs."
+msgstr ""
+
+#: templates/calculator_rules.html:20
+msgid ""
+"Results and actual savings may vary depending on: machine, operating "
+"pressure, operator, outside temperature and other factors."
+msgstr ""
+
+#: templates/catalogue_brochures.html:12 templates/produits/side_menu.html:15
+msgid "Catalogues and brochures"
+msgstr "Catalogues et brochures"
+
+#: templates/catalogue_brochures.html:17
+msgid "Click"
+msgstr "Cliquez"
+
+#: templates/catalogue_brochures.html:17
+msgid "here"
+msgstr "ici"
+
+#: templates/catalogue_brochures.html:17
+msgid "to see our online version"
+msgstr "pour voir la version en ligne"
+
+#: templates/catalogue_brochures.html:20
+msgid "Downloads:"
+msgstr "Téléchargement:"
+
+#: templates/catalogue_brochures.html:23
+msgid "Taimi 2014 Product Catalog"
+msgstr "Catalogue de Produits Taimi 2014 (Anglais)"
+
+#: templates/catalogue_brochures.html:29
+msgid "Brochures"
+msgstr "Brochures"
+
+#: templates/catalogue_brochures.html:32
+msgid "Taimi 2013 Product Catalog"
+msgstr "Catalogue de Produits Taimi 2013 (Anglais)"
+
+#: templates/catalogue_brochures.html:36
+msgid "General Brochure"
+msgstr ""
+
+#: templates/catalogue_brochures.html:43
+msgid "Forestry Brochure"
+msgstr ""
+
+#: templates/catalogue_brochures.html:50
+msgid "Taimi's Technology Explained"
+msgstr ""
+
+#: templates/catalogue_brochures.html:57
+msgid "Swivel Comparison Chart"
+msgstr ""
+
+#: templates/catalogue_brochures.html:64
+msgid "Real Cost of Swivel Replacement"
+msgstr ""
+
+#: templates/catalogue_brochures.html:71
+msgid "Hydraulic Solutions - Forestry Equipment"
+msgstr ""
+
+#: templates/catalogue_brochures.html:78
+msgid "Group and Support Hoses Efficiently"
+msgstr ""
+
+#: templates/catalogue_brochures.html:85
+msgid "More Productive Drill Rigs"
+msgstr ""
+
+#: templates/contact.html:6
+msgid "Contact - Get in touch"
+msgstr "Contacts – Communiquer avec nous"
+
+#: templates/contact.html:15
+msgid "Taimi Hydraulics administration"
+msgstr "Administration Taimi Hydraulique"
+
+#: templates/contact.html:23
+msgid ""
+"For any enquiry, give us a call or contact us by sending an email. We aim to "
+"respond to all online enquiries within one working day."
+msgstr ""
+"Pour tout besoin d’information, n’hésitez pas à nous appeler ou à nous "
+"envoyer un email. Notre objectif est de répondre à toutes les demandes "
+"d’information en ligne à l’intérieur d’un jour ouvrable."
+
+#: templates/contact.html:25
+msgid "Opening hours"
+msgstr "Heures d'ouvertures"
+
+#: templates/contact.html:25
+msgid "- Time Zone EST (UTC/GMT -5 hours)"
+msgstr "Heures d'ouverture - Time Zone EST (UTC/GMT -5 hours)"
+
+#: templates/contact.html:26
+msgid "Monday to Thursday : 8:00 AM - 4:30 PM"
+msgstr "Lundi au jeudi : 8:00 AM - 4:30 PM"
+
+#: templates/contact.html:27
+msgid "Friday : 8:00 AM - 4:00 PM"
+msgstr "Vendredi : 8:00 AM - 4:00 PM"
+
+#: templates/contact.html:28
+msgid "Saturday and Sunday: CLOSED"
+msgstr "Samedi et dimanche : Fermé"
+
+#: templates/contact.html:33
+msgid "Please use the form below to send us an email."
+msgstr "Utilisez le formulaire ci-dessous pour nous envoyer un courriel."
+
+#: templates/index.html:15
+msgid ""
+"Taimi pioneered the “Spike Protected”  high pressure ball-less swivel "
+"technology and invented the swivel cartridge"
+msgstr ""
+"Taimi a inventé la cartouche et le raccord tournant sans billes protégé "
+"contre les chocs hydrauliques."
+
+#: templates/index.html:25
+msgid ""
+"Taimi is a manufacturer of leak-free long lasting swivel products designed "
+"to support today's pressure requirements."
+msgstr ""
+"Taimi est un manufacturier de raccords tournants sans fuites durables conçus "
+"pour résister à la haute pression des équipements modernes."
+
+#: templates/index.html:34
+msgid ""
+"Taimi works with users, distributors and equipment manufacturers to design "
+"innovative swivel products."
+msgstr ""
+"Taimi travaille avec les manufacturiers, les utilisateurs et les opérateurs "
+"d’équipement pour concevoir des produits innovateurs."
+
+#: templates/index.html:47
+msgid "Taimi Live Swivel Joints"
+msgstr "Raccords tournants Taimi"
+
+#: templates/index.html:50
+msgid ""
+"Featuring Taimi’s Pressure Spike Protection&trade;, the most reliable ball-"
+"less swivels on the market are designed to be leak resistant, endure heavy "
+"side load, high pull force and the high pressure and flow of modern "
+"equipment."
+msgstr ""
+"Nous avons développé une technologie unique de raccords rotatifs sans "
+"billes. Nos produits sont fiables, résistants aux fuites, protégés contre "
+"les « coups de bélier » et peuvent endurer des charges latérales et "
+"d’arrachement importantes. Ils sont conçus pour la haute pression des "
+"machines modernes."
+
+#: templates/index.html:53 templates/index.html.py:64
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#: templates/index.html:58
+msgid "Innovative Swivel Products"
+msgstr "Produits swivel innovateurs"
+
+#: templates/index.html:61
+msgid ""
+"A range of unique and patented swivel products designed to increase "
+"hydraulic reliability of forestry, mining, transport and industrial "
+"equipment."
+msgstr ""
+"Une gamme de produits, unique et brevetée, conçue pour améliorer la "
+"fiabilité hydraulique d’équipements forestiers, miniers, industriels et de "
+"transport."
+
+#: templates/info_request.html:6
+msgid "Your information request"
+msgstr "Votre demande d'information"
+
+#: templates/info_request.html:12 templates/produits/produit_detail.html:47
+msgid "Part. #"
+msgstr ""
+
+#: templates/info_request.html:13 templates/recherche.html:14
+#: templates/utilities/info_mail.html:11
+msgid "Category"
+msgstr "Catégorie"
+
+#: templates/info_request.html:14 templates/utilities/info_mail.html:12
+msgid "Sub-Category"
+msgstr "Sous-Catégorie"
+
+#: templates/info_request.html:15 templates/produits/produit_detail.html:83
+msgid "SEAL_KIT"
+msgstr ""
+
+#: templates/info_request.html:16 templates/utilities/info_mail.html:14
+msgid "Info. Request"
+msgstr "Requête"
+
+#: templates/info_request.html:38
+msgid "Name"
+msgstr "Nom"
+
+#: templates/info_request.html:38 templates/info_request.html.py:42
+#: templates/info_request.html:48 templates/info_request.html.py:52
+#: templates/info_request.html:58
+msgid "required"
+msgstr "requis"
+
+#: templates/info_request.html:42
+msgid "Email"
+msgstr "Courriel"
+
+#: templates/info_request.html:48
+msgid "Country"
+msgstr "Pays"
+
+#: templates/info_request.html:52
+msgid "Postal Code"
+msgstr "Code postale"
+
+#: templates/info_request.html:58
+msgid "Message"
+msgstr "Message"
+
+#: templates/info_request.html:65
+msgid "Send Message"
+msgstr "Envoyer le message"
+
+#: templates/info_request.html:79
+msgid "No data available"
+msgstr "Aucune donnée disponible"
+
+#: templates/produits.html:42
+msgid "Create an inquiry basket to get prices and information"
+msgstr "Créer un panier d'enquête pour obtenir des prix et de l'information"
+
+#: templates/produits.html:44
+msgid ""
+"To request prices or technical information for specific products, click on "
+"the + sign at the right side of the table. The products will be added to "
+"your inquiry basket. When you are done, click on <a href=\"/produits/"
+"listinfo/\">Information request</a>  on top right of the page. We will get "
+"back to you shortly with all the information you need."
+msgstr ""
+
+#: templates/produits.html:105 templates/produits/produit_detail.html:98
+msgid "INFO"
+msgstr "INFO"
+
+#: templates/taimi_calculator.html:26
+msgid "Got equipment using hydraulics and swivels?"
+msgstr ""
+
+#: templates/taimi_calculator.html:27
+msgid ""
+"Reduce the costs of swivel replacement, increase hose life and increase your "
+"bottom line."
+msgstr ""
+
+#: templates/taimi_calculator.html:38
+msgid ""
+"Taimi Swivels are the toughest out there. An independent lab test proved our "
+"years of field history results right:\n"
+"\t \t\tTaimi swivels will far outlast any other swivel on the market."
+msgstr ""
+
+#: templates/taimi_calculator.html:40
+msgid ""
+"The cost of ownership of a Taimi swivel is the lowest compared to any other "
+"swivel. \n"
+"\t\t\tAcquisition cost, although higher, is not the most important part of "
+"the equation. Taimi swivels are the cheapest swivels &lsquo;by the "
+"hour&rsquo; on the market today."
+msgstr ""
+
+#: templates/taimi_calculator.html:46
+msgid "See how much you can save by switching to Taimi Swivels"
+msgstr ""
+
+#: templates/taimi_calculator.html:58
+msgid "Step 1"
+msgstr ""
+
+#: templates/taimi_calculator.html:60
+msgid "Equipment"
+msgstr ""
+
+#: templates/taimi_calculator.html:63
+msgid "Step 2"
+msgstr ""
+
+#: templates/taimi_calculator.html:65
+msgid "Location"
+msgstr ""
+
+#: templates/taimi_calculator.html:68
+msgid "Step 3"
+msgstr ""
+
+#: templates/taimi_calculator.html:70
+msgid "Type of swivels"
+msgstr ""
+
+#: templates/taimi_calculator.html:73
+msgid "Step 4"
+msgstr ""
+
+#: templates/taimi_calculator.html:75
+msgid "Hours worked by years"
+msgstr ""
+
+#: templates/taimi_calculator.html:79
+msgid "Select your equipment"
+msgstr ""
+
+#: templates/taimi_calculator.html:84
+msgid "Harvester/Processor Head"
+msgstr ""
+
+#: templates/taimi_calculator.html:88
+msgid "High Rotation Disc Saw Felling Head"
+msgstr ""
+
+#: templates/taimi_calculator.html:91
+msgid ""
+"If you operate equipment with high hose movement, you could save big time by "
+"using Taimi Swivels. We invite you to visit our website. Check out our "
+"product range and get in touch with us."
+msgstr ""
+
+#: templates/taimi_calculator.html:92
+msgid "Other"
+msgstr ""
+
+#: templates/taimi_calculator.html:98
+msgid "Select your location"
+msgstr ""
+
+#: templates/taimi_calculator.html:102
+msgid "America"
+msgstr ""
+
+#: templates/taimi_calculator.html:106
+msgid "Europe"
+msgstr ""
+
+#: templates/taimi_calculator.html:112
+msgid "What type of swivels do you currently use?"
+msgstr ""
+
+#: templates/taimi_calculator.html:116
+msgid "None"
+msgstr ""
+
+#: templates/taimi_calculator.html:120
+msgid "Ball Bearing Swivels"
+msgstr ""
+
+#: templates/taimi_calculator.html:124
+msgid "Heavy Duty Ball Bearing Swivels"
+msgstr ""
+
+#: templates/taimi_calculator.html:128
+msgid "Ball + Needle Bearing Swivels"
+msgstr ""
+
+#: templates/taimi_calculator.html:132
+msgid "I don’t know which type I’m using"
+msgstr ""
+
+#: templates/taimi_calculator.html:138
+msgid "Enter hours worked per year"
+msgstr ""
+
+#: templates/taimi_calculator.html:140
+msgid "Hours worked by year:"
+msgstr ""
+
+#: templates/taimi_calculator.html:145
+msgid ""
+"Click Calculate button to see how much you can save by switching to Taimi "
+"Swivels."
+msgstr ""
+
+#: templates/taimi_calculator.html:166
+msgid "Next"
+msgstr "Suivant"
+
+#: templates/taimi_calculator.html:167
+msgid "Previous"
+msgstr "Précédant"
+
+#: templates/taimi_calculator.html:168
+msgid "Calculate"
+msgstr "Calculer"
+
+#: templates/testimonies_plugin.html:12
+msgid "Read More"
+msgstr "En savoir plus"
+
+#: templates/nouvelles/newspage.html:21
+msgid ""
+"Get informations about our products, latest innovations and testimonies "
+msgstr ""
+"Abonnez-vous au bulletin Taimi afin d’être au courant des dernières "
+"nouveautés."
+
+#: templates/nouvelles/newspage.html:21
+msgid "by subscribing to our newletters :"
+msgstr "en s'inscrivant à nos infolettres :"
+
+#: templates/produits/customer_map.html:2
+msgid ""
+"We have distributors in <b>21 countries</b>. To locate the one nearest to "
+"you, please contact us."
+msgstr ""
+"Nous avons des distributeurs dans 21 pays. Pour connaître celui près de chez "
+"vous, contactez-nous."
+
+#: templates/produits/list_produits.html:13
+msgid "Live Swivels"
+msgstr "Raccords tournants Taimi"
+
+#: templates/produits/list_produits.html:15
+msgid ""
+"Featuring Taimi's Pressure Spike Protection™, the most reliable ball-less\n"
+"            swivels on the market are designed to be leak resistant, endure "
+"heavy side\n"
+"            load, high pull force and the high pressure and flow of modern "
+"equipment."
+msgstr ""
+"Nous avons développé une technologie unique de raccords rotatifs sans "
+"billes. Nos produits sont fiables, résistants aux fuites, protégés contre "
+"les « coups de bélier » et peuvent endurer des charges latérales et "
+"d’arrachement importantes. Ils sont conçus pour la haute pression des "
+"machines modernes."
+
+#: templates/produits/list_produits.html:26
+msgid "Inline swivels"
+msgstr "Raccord tournants droits"
+
+#: templates/produits/list_produits.html:44
+msgid "90 swivels"
+msgstr "Swivels 90*"
+
+#: templates/produits/list_produits.html:57
+msgid "Swivels Products"
+msgstr "Produits swivel"
+
+#: templates/produits/list_produits.html:59
+msgid ""
+"A range of unique and patented swivel products designed to increase "
+"hydraulic reliability \n"
+"            of forestry, mining, transport and industrial equipment."
+msgstr ""
+"Une gamme de produits, unique et brevetée, conçue pour améliorer la "
+"fiabilité hydraulique d’équipements forestiers, miniers, industriels et de "
+"transport."
+
+#: templates/produits/list_produits.html:69
+msgid "Swivel cartridge"
+msgstr "Swivel cartridge"
+
+#: templates/produits/list_produits.html:86
+msgid "Swiroll"
+msgstr "Swiroll"
+
+#: templates/produits/list_produits.html:103
+msgid "Swivel Manifold"
+msgstr "Swivel Manifold"
+
+#: templates/produits/list_produits.html:118
+msgid "See how much you could save by switching to Taimi swivels"
+msgstr "Économiser en changeant vos swivels pour des Taimi"
+
+#: templates/produits/list_produits.html:119
+msgid "Calculate your savings"
+msgstr "Calculer vos économies"
+
+#: templates/produits/list_produits_cat.html:27
+msgid "Choose your type of"
+msgstr "Voir les options de"
+
+#: templates/produits/produit_detail.html:34
+msgid ""
+"To request prices or technical information for specific products, click on "
+"the + sign at the right side of the table.\n"
+"                The products will be added to your inquiry basket. When you "
+"are done, click on"
+msgstr ""
+
+#: templates/produits/produit_detail.html:36
+msgid ""
+"We will get back by email to you shortly with all the information you need."
+msgstr ""
+
+#: templates/produits/produit_detail.html:43
+msgid "Image"
+msgstr ""
+
+#: templates/produits/produit_detail.html:51
+msgid "Referer"
+msgstr ""
+
+#: templates/produits/produit_detail.html:87
+msgid "PORTS"
+msgstr ""
+
+#: templates/produits/produit_detail.html:91
+msgid "WEIGHT"
+msgstr ""
+
+#: templates/produits/produit_detail.html:95
+msgid "VIDEO"
+msgstr ""
+
+#: templates/produits/produit_detail.html:163
+msgid "Video"
+msgstr ""
+
+#: templates/produits/side_bar.html:6
+msgid "Warranted 12 months"
+msgstr "Garantie 12 mois"
+
+#: templates/produits/side_bar.html:10
+msgid "Why choose Taimi swivels"
+msgstr "Pourquoi choisir les raccords Taimi?"
+
+#: templates/produits/side_bar.html:13
+msgid "Better wear resistance"
+msgstr "Meilleure résistance à l’usure"
+
+#: templates/produits/side_bar.html:16
+msgid "Withstand high pressure"
+msgstr "Fonctionne à plus haute pression"
+
+#: templates/produits/side_bar.html:19
+msgid "Better side load resistance"
+msgstr "Meilleure résistance aux charges latérales"
+
+#: templates/produits/side_bar.html:22
+msgid "Fewer hydraulic leaks"
+msgstr "Moins de fuites"
+
+#: templates/produits/side_bar.html:25
+msgid "Easy maintenance"
+msgstr "Maintenance facile"
+
+#: templates/produits/side_bar.html:29
+msgid "More on advantages"
+msgstr "En savoir plus"
+
+#: templates/produits/side_menu.html:6
+msgid "Live Swivels and Swivel Products"
+msgstr "Produits swivel"
+
+#: templates/produits/side_menu.html:12
+msgid "Strap-Wrap"
+msgstr "Strap-Wrap"
+
+#: templates/produits/side_menu.html:18
+msgid "Videos"
+msgstr "Vidéos"
+
+#: templates/produits/side_menu.html:21
+msgid "Testimonies"
+msgstr "Témoignages"
+
+#: templates/produits/side_menu.html:24
+msgid "Info request"
+msgstr "Demande d'information"
+
+#~ msgid "Most popular Taimi swivels can now be shipped from our US warehouse"
+#~ msgstr ""
+#~ "Les raccords tournants Taimi les plus vendus peuvent maintenant être "
+#~ "expédiés de notre entrepôt aux États-Unis."

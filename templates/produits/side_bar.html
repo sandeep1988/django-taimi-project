@@ -1,0 +1,30 @@
+{% load menu_tags cms_tags i18n %}
+
+{% include "produits/side_menu.html" %}
+
+<div class="well" style="margin-top: 30px;">
+    <a href="{% page_url 24 %}">{% trans "Warranted 12 months" %}</b></a>
+  
+</div>
+
+<h2 style="color: black;">{% trans "Why choose Taimi swivels" %}</h2>
+<ul class="benefits">
+    <li>
+        {% trans "Better wear resistance" %}
+    </li>
+    <li>
+        {% trans "Withstand high pressure" %}
+    </li>
+    <li>
+        {% trans "Better side load resistance" %}
+    </li>
+    <li>
+        {% trans "Fewer hydraulic leaks" %}
+    </li>
+    <li>
+        {% trans "Easy maintenance" %}
+    </li>
+</ul>
+<p>
+    <a href="{% page_url 13 %}">{% trans "More on advantages" %}</a>
+</p>

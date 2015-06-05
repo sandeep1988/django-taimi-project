@@ -1,0 +1,41 @@
+.produits article {
+	width: 160px;
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	height: 240px;
+}
+.produits img {
+	border: 1px solid #dddddd;
+}
+.produits #produit-categorie {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.produits .produit-detail-prix {
+	font-size: 1.4em;
+}
+.produit-pagination {
+	text-align: center;
+	margin-top: 40px;
+}
+.produits .produit-detail-nom h1 {
+	padding-top: 0px;
+	margin-bottom: 0px;
+}
+.produits .produit-detail-nom a {
+	text-decoration: none;
+}
+.produits .produit-detail-image {
+	margin-top: 8px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 40px;
+	margin-left: 40px;
+}
+.produit-detail-description {
+	overflow: hidden;
+}
+
+{{ client.nom }}

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load sekizai_tags cms_tags menu_tags i18n %}
+
+
+{% block content %}
+
+<div class="well mainCarouselwrapper">
+<div id="mainCarousel" class="carousel slide">
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="{{ STATIC_URL }}img/live-swivels.jpg" style="width:100%; height: 350px;" alt="">
+			<div class="carousel-caption">
+				<h4>{% trans "Taimi Hydraulics" %}</h4>
+				<p>
+					{% trans "Taimi pioneered the “Spike Protected”  high pressure ball-less swivel technology and invented the swivel cartridge" %}
+				</p>
+
+			</div>
+		</div>
+		<div class="item">
+			<img src="{{ STATIC_URL }}img/test-machine.jpg" style="width:100%; height: 350px;" alt="">
+			<div class="carousel-caption">
+				<h4>{% trans "Taimi Hydraulics" %}</h4>
+				<p>
+					{% trans "Taimi is a manufacturer of leak-free long lasting swivel products designed to support today's pressure requirements." %}
+				</p>
+			</div>
+		</div>
+		<div class="item">
+			<img src="{{ STATIC_URL }}img/worker-man-hydrolic.jpg" style="width:100%; height: 350px;" alt="">
+			<div class="carousel-caption">
+				<h4>{% trans "Taimi Hydraulics" %}</h4>
+				<p>
+					{% trans "Taimi works with users, distributors and equipment manufacturers to design innovative swivel products." %}
+				</p>
+			</div>
+		</div>
+	</div>
+	<a class="left carousel-control" href="#mainCarousel" data-slide="prev">&lsaquo;</a>
+	<a class="right carousel-control" href="#mainCarousel" data-slide="next">&rsaquo;</a>
+</div>
+</div>
+<div class="sectionTitle" style="margin-top: 0px;"></div>
+<div class="row">
+	
+	<div class="feature span6">
+		<h4><i class='icon-cogs'> </i><a href="{% page_url 23 %}">{% trans "Taimi Live Swivel Joints" %}</a> </h4>
+		<a href="{% page_url 23 %}"><img src="{{ STATIC_URL }}img/taimi-live-swivels.jpg" alt="" class="homeImage rounded-corner-img" width="460"/></a>
+		<p class="justify text-home">
+			{% trans "Featuring Taimi’s Pressure Spike Protection&trade;, the most reliable ball-less swivels on the market are designed to be leak resistant, endure heavy side load, high pull force and the high pressure and flow of modern equipment." %}
+		</p>
+		<p>
+			<a href="{% page_url 23 %}">{% trans "Learn More" %}</a>
+		</p>
+
+	</div>
+	<div class="feature span6">
+		<h4><i class='icon-bar-chart'> </i><a href="{% page_url 23 %}">{% trans "Innovative Swivel Products" %}</a></h4>
+		<a href="{% page_url 23 %}"><img src="{{ STATIC_URL }}img/innovative-swivel-product.jpg" alt="" class="homeImage rounded-corner-img" width="460"/></a>
+		<p class="justify text-home">
+			{% trans "A range of unique and patented swivel products designed to increase hydraulic reliability of forestry, mining, transport and industrial equipment." %}
+		</p>
+		<p>
+			<a href="{% page_url 23 %}">{% trans "Learn More" %}</a>
+		</p>
+	</div>
+
+</div>
+
+{% addtoblock "js" %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.carousel').carousel('cycle');  
+    });
+</script>
+{% endaddtoblock %}
+
+{% endblock %}

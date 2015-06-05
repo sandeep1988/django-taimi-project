@@ -1,0 +1,11 @@
+<div id="collapse{{ child.id }}" class="accordion-body collapse {% if child.ancestor %}in{% endif %}">
+      <div class="accordion-inner">
+      		<ul class="subnav-product">
+        	{% for child in children %}
+        		<li {% if child.selected or child.ancestor %}class="active"{% endif %}>
+        			<a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+        		</li>
+        	{% endfor %}
+        	</ul>
+     </div>
+</div>

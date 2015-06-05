@@ -1,0 +1,12 @@
+{% load menu_tags %}
+{% for child in children %}
+{% if child.level == 0 %}
+{% if forloop.counter < 7 %}
+<li class="{% if child.selected %}active{% endif %}{% if child.ancestor %}ancestor{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}">
+	<a {% if child.app_pages and child.level == 0 %}href="{{child.app_pages.0.get_absolute_url}}"
+        {% else %}href="{{ child.get_absolute_url }}"{% endif %} data-description="{% if child.page_instance.description %}{{ child.page_instance.description }}{% endif %}">{{ child.get_menu_title }}</a>
+
+</li>
+{% endif %}
+{% endif %}
+{% endfor %}

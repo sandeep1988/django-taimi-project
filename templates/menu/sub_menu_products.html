@@ -1,0 +1,33 @@
+{% load menu_tags %}
+
+{% for child in children %}
+<li>
+	<div class="accordion-group">
+    	<div class="accordion-heading {% if child.selected or child.ancestor %}active{% endif %}">
+    	
+    	{% if child.children %}
+    	
+      		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse{{ child.id }}">
+        		{{ child.get_menu_title }}
+      		</a>
+      	
+      	{% else %}
+      		<a class="accordion-toggle" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">
+        		{{ child.get_menu_title }}
+      		</a>
+      	{% endif %}	
+      	
+    	</div>
+    
+    {% if child.children %}
+    	{% show_menu from_level to_level extra_inactive extra_active "menu/sub_menu_collapse.html" "" "" child %}
+    {% endif %}
+    
+    <!--<div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>-->
+  </div>
+</li>
+{% endfor %}

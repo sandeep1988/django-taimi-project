@@ -1,0 +1,38 @@
+{% load sekizai_tags i18n %}
+{% for testimony in instance.testimonies %}
+        <div style="clear:both; margin-bottom:20px; overflow:hidden;">
+            <div style="width:80px; float:left;">
+                <img width=60 height=60 src="{{ MEDIA_URL }}{{ testimony.image }}"></img>
+            </div>
+            <div>{{ testimony.date }}</div>
+            <div><b>{{testimony.nom}}</b><br />{{testimony.poste}}</div>
+            <div class="clearfix"></div>
+            <br/>
+            <div>{{ testimony.description|safe|truncatewords_html:30 }}<br/>
+            <a class="inline" href="#data_{{ testimony.id }}">{% trans "Read More" %}</a></div>
+        </div>
+        <hr/>
+        <div id="data_{{ testimony.id }}" style="display:none; width:700px;">
+                <div style="clear:both;"><b>{{ testimony.date }}</b></div><br/>
+                <div>
+                    <div style="width:70px; float:left;">
+                        <img width=60 height=60 src="{{ MEDIA_URL }}{{ testimony.image }}"></img>
+                    </div>
+                    {{ testimony.description|safe }}
+                </div>
+                <div style="text-align:right; clear:both;">
+                    <br/><b>{{ testimony.nom }}</b><br/>
+                    {{ testimony.poste }}
+                </div>         
+        </div>
+  
+{% endfor %}
+
+{% addtoblock "js" %}
+    <script>
+        $(document).ready(function (){
+            $("a.inline").fancybox();
+        });
+    </script>
+{% endaddtoblock %}
+

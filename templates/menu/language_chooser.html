@@ -1,0 +1,11 @@
+{% load menu_tags %}
+<form action="/i18n/setlang/" method="post" style="display: inline;">{% csrf_token %}
+    <div style="float: left; margin-right: 10px;">
+        <select name="language" onchange="location = this.options[this.selectedIndex].value;" style="height: 25px; width: 100px;">
+        <!--<select name="language" onchange="alert('Multilingual is not yet implanted');" style="width: 100px;">-->
+            {% for lang in LANGUAGES %}
+                <option value="{% page_language_url lang.0 %}"{% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>{{ lang.1 }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</form>

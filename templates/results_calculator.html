@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load i18n menu_tags sekizai_tags %}
+{% load cms_tags %}
+
+{% block content %}
+
+<div class="row">
+	<div class="span8">
+		<h2 class="pageTitle">Here is how much you could save with Taimi swivels</h2>
+		<p style="font-size: 16px;">Taimi swivels will last on average 6000 hours in a typical logging/harvesting application.</p>
+		<p style="font-size: 16px;">Your total savings for that period could be: <span style="color: red">{{ save_money_6000_hours|floatformat:2 }}{{ dollar_sign }}.</span></p>
+		<p style="font-size: 16px;">Since you are working: <span style="color: red">{{ hours_worked }} </span> hours per year, you could be saving <span style="color: red">{{ save_money_by_year|floatformat:2 }}{{ dollar_sign }}</span> every year for <span style="color: red">{{ number_of_year|floatformat:1 }}</span> years.</p>
+		<br/>
+		<p><a href="/contact/" class="btn-warning btn-large" style="text-decoration: none;">Contact us to get prices</a> or <a href="/en/swivels/" style="text-decoration: none;">Explore our product range</a></p>
+	</div>
+	<div class="span4 newsletterBox">
+		<h4>{% trans "Newsletter" %}</h4>
+		<p style="text-align:justify">
+			{% trans "Subscribe to our newsletter and keep up to date 3 times a year with latest testimonies, promotions, innovations and news from Taimi Hydraulics." %}
+		</p>
+		<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+		<style type="text/css">
+			#mc_embed_signup {
+				clear: left;
+				font: 14px Helvetica, Arial, sans-serif;
+				margin-left: -8px;
+			}
+		</style>
+		{% if LANGUAGE_CODE = "fr" %}
+		<div id="mc_embed_signup">
+			<form action="http://Taimi.us6.list-manage.com/subscribe/post?u=8d38a5d6c12f2f13d1395923a&amp;id=e6b3c78925" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+				<div class="clear">
+					<input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button">
+				</div>
+			</form>
+		</div>
+		{% elif LANGUAGE_CODE = "en" %}
+		<div id="mc_embed_signup">
+			<form action="http://Taimi.us6.list-manage2.com/subscribe/post?u=8d38a5d6c12f2f13d1395923a&amp;id=0de02153e5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+				<div class="clear">
+					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+				</div>
+			</form>
+		</div>
+		{% elif LANGUAGE_CODE = "es" %}
+		<div id="mc_embed_signup">
+			<form action="http://Taimi.us6.list-manage2.com/subscribe/post?u=8d38a5d6c12f2f13d1395923a&amp;id=6bbb41c859" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+				<div class="clear">
+					<input type="submit" value="Suscribirse" name="subscribe" id="mc-embedded-subscribe" class="button">
+				</div>
+			</form>
+		</div>
+		{% endif %}
+		<!--End mc_embed_signup-->
+		<!--End mc_embed_signup-->
+	</div>
+</div>
+{% include "calculator_rules.html" %}
+
+
+{% endblock %}

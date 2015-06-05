@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load menu_tags cms_tags i18n %}
+
+{% block content %}
+<div class="row">
+
+	<div class="span4">
+		{% include "produits/side_bar.html" %}
+	</div>
+
+	<div class="span8">
+		<h1 class="pageTitle">{% trans "Catalogues and brochures" %}</h1>
+
+		<a href="http://issuu.com/taimihydraulics/docs/taimi_2012_product_catalog?mode=window&amp;backgroundColor=#222222" target="_blank"> <img src="/static/img/catalogue-taimi.jpeg" style="float: left; margin-right: 20px;" /> </a>
+
+		<p>
+			{% trans "Click" %} <a href="http://issuu.com/taimihydraulics/docs/taimi_2012_product_catalog?mode=window&amp;backgroundColor=#222222" target="_blank">{% trans "here" %}</a> {% trans "to see our online version" %}
+		</p>
+		<p>
+			{% trans "Downloads:" %}
+		</p>
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/TaimiProductCatalog_2014.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "Taimi 2014 Product Catalog" %}</span> </a>
+		</p>
+
+		<div style="clear: both;"></div>
+		<div class="line"></div>
+
+		<h3 style="margin-top: 0px; padding-top: 0px;">{% trans "Brochures" %}</h3>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/General%20Brochure.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "General Brochure" %}</span> </a>
+		</p>
+
+		</p>
+		<p>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/Forestry%20Brochure_1.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "Forestry Brochure" %}</span> </a>
+		</p>
+
+		</p>
+		<p>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/TAIMI%E2%80%99s_TECHNOLOGY_EXPLAINED%20_1.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "Taimi's Technology Explained" %}</span> </a>
+		</p>
+
+		</p>
+		<p>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/Swivel%20Comparison%20Chart.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "Swivel Comparison Chart" %}</span> </a>
+		</p>
+
+		</p>
+		<p>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/REAL%20COST%20OF%20SWIVEL%20REPLACEMENT%2003328.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "Real Cost of Swivel Replacement" %}</span> </a>
+		</p>
+
+		</p>
+		<p>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/Hydraulic%20Solutions%20-%20Forestry%20Equipment%20V2.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "Hydraulic Solutions - Forestry Equipment" %}</span> </a>
+		</p>
+
+		</p>
+		<p>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/Group%20and%20Support%20Hoses%20Efficiently_1.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "Group and Support Hoses Efficiently" %}</span> </a>
+		</p>
+
+		</p>
+		<p>
+
+		<p class="plugin_file">
+			<a href="/media/cms_page_media/10/MORE%20PRODUCTIVE%20DRILL%20RIGS.pdf" target="_blank"> <img src="/static/cms/images/file_icons/pdf.gif" alt="" /> <span class="filetitle">{% trans "More Productive Drill Rigs" %}</span> </a>
+		</p>
+
+	</div>
+</div>
+
+{% endblock %}

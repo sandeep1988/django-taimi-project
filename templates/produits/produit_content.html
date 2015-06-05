@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load produits_tags i18n  %}
+{% load menu_tags cms_tags sekizai_tags %}
+{% load thumbnail %}
+
+{% block content %}
+<div class="row">
+    <div class="span4">
+
+        {% include "produits/side_bar.html" %}
+
+    </div>
+    <div class="span8">
+
+        <h1 class="pageTitle">{{ request.current_page.get_menu_title }}</h1>
+
+    	 {% placeholder "content2" %}
+
+    </div>
+</div>
+
+{% endblock %}

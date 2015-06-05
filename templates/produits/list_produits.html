@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% load produits_tags menu_tags cms_tags i18n %}
+
+{% block content %}
+<div class="row">
+    <div class="span4">
+
+        {% include "produits/side_bar.html" %}
+
+    </div>
+    <div class="span8 prodlist">
+
+        <h2 class="pageTitle">{% trans "Live Swivels" %}</h2>
+        <p>
+            {% blocktrans %}Featuring Taimi's Pressure Spike Protection™, the most reliable ball-less
+            swivels on the market are designed to be leak resistant, endure heavy side
+            load, high pull force and the high pressure and flow of modern equipment.{% endblocktrans %}
+        </p>
+		<div class="clearfix">
+	        <div class="accordion-content">
+	            <a href="{% page_url 23 %}inline-swivels/"><img src="{{ STATIC_URL }}img/inline-swivels.png" alt="inline swivels" class="rounded-corner-img"/></a>
+	            <br/>
+	   
+	            <div class="btn-group">
+	                
+	                <a href="{% page_url 23 %}inline-swivels/" class="btn">{% trans "Inline swivels" %}</a>
+	                
+	                <button class="btn dropdown-toggle" data-toggle="dropdown">
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+	                    {% product_subcat_list 3 %}
+	                </ul>
+	            </div>
+	
+	        </div>
+	        <div class="accordion-content">
+	            <a href="{% page_url 23 %}90-swivels/"><img src="{{ STATIC_URL }}img/90-swivels.jpg" alt="90 swivels" class="rounded-corner-img"/></a>
+	            <br/>
+	    
+	            
+	             <div class="btn-group">
+	          
+	                <a href="{% page_url 23 %}90-swivels/" class="btn">{% trans "90 swivels" %}</a>
+	            
+	                <button class="btn dropdown-toggle" data-toggle="dropdown">
+	                    <span class="caret"> </span>
+	                </button>
+	                <ul class="dropdown-menu">
+	                    {% product_subcat_list 4 %}
+	                </ul>
+	            </div>
+	            
+	        </div>
+	    </div>
+	    <div class="clearfix"><hr/></div>
+        <h2 class="pageTitle">{% trans "Swivels Products" %}</h2>
+        <p>
+            {% blocktrans %}A range of unique and patented swivel products designed to increase hydraulic reliability 
+            of forestry, mining, transport and industrial equipment.{% endblocktrans %}
+        </p>
+		<div class="clearfix">
+	        <div class="accordion-content">
+	            <a href="{% page_url 23 %}swivel-cartridge/"><img src="{{ STATIC_URL }}img/swivel-cartridge.png" alt="swivel cartridge" class="rounded-corner-img"/></a>
+	            <br/>
+	  
+	            <div class="btn-group">
+	               
+	                <a href="{% page_url 23 %}swivel-cartridge/" class="btn">{% trans "Swivel cartridge" %}</a>
+	              
+	                <button class="btn dropdown-toggle" data-toggle="dropdown">
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+	                    {% product_subcat_list 5 %}
+	                </ul>
+	            </div>
+	            
+	        </div>
+	        <div class="accordion-content">
+	            <a href="{% page_url 23 %}swiroll/"><img src="{{ STATIC_URL }}img/swivel-swiroll.jpg" alt="Swivel swiroll" class="rounded-corner-img"/></a>
+	            <br/>
+	            
+	            <div class="btn-group">
+	            
+	                <a href="{% page_url 23 %}swiroll/" class="btn">{% trans "Swiroll" %}</a>
+	              
+	                <button class="btn dropdown-toggle" data-toggle="dropdown">
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+	                    {% product_subcat_list 6 %}
+	                </ul>
+	            </div>
+	            
+	        </div>
+	        <div class="accordion-content">
+	            <a href="{% page_url 23 %}swivel-manifold/"><img src="{{ STATIC_URL }}img/swivel-manifold.png" alt="swivel manifold" class="rounded-corner-img"/></a>
+	            <br/>
+	            
+	            <div class="btn-group">
+	              
+	                <a href="{% page_url 23 %}swivel-manifold/" class="btn">{% trans "Swivel Manifold" %}</a>
+	                
+	                <button class="btn dropdown-toggle" data-toggle="dropdown">
+	                    <span class="caret"></span>
+	                </button>
+	                <ul class="dropdown-menu">
+	                    {% product_subcat_list 7 %}
+	                </ul>
+	            </div>
+	            
+	        </div>
+        </div>
+
+        <div id="cta-box">
+            <div class="well">
+                <div class="text">{% trans "See how much you could save by switching to Taimi swivels" %}</div>
+                <a href="{% page_url 26 %}" class="btn btn-danger">{% trans "Calculate your savings" %}</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

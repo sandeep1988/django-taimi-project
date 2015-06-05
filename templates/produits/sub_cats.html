@@ -1,0 +1,4 @@
+{% load menu_tags cms_tags %}
+{% for cat in subcats %}
+    <li><a href="{% page_url 23 %}{{ cat.get_url }}">{{ cat.title }}</a></li>
+{% endfor %}

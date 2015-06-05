@@ -1,0 +1,26 @@
+{% load menu_tags cms_tags i18n produits_tags %}
+<ul id="servicesTab" class="nav nav-list sidenav">
+    <li class="dropdown {% ifequal request.current_page.id 23 %}active{% endifequal %} {% ifequal request.current_page.id none %}active{% endifequal %}">
+        <a class="dropdown-toggle "
+        data-toggle="dropdown"
+        <a href="#"> <i class="icon-cogs"></i>{% trans "Live Swivels and Swivel Products" %}<b class="caret"></b> </a>
+        <ul class="dropdown-menu">
+        	{% product_cat_list %}
+        </ul>
+    </li>
+    <li {% ifequal request.current_page.id 17 %}class="active"{% endifequal %}>
+        <a href="/strap-wrap/"><i class="icon-chevron-right"></i><i class="icon-cogs"></i>{% trans "Strap-Wrap" %}</a>
+    </li>
+    <li {% ifequal request.current_page.id 10 %}class="active"{% endifequal %}>
+        <a href="{% page_url 10 %}"><i class="icon-chevron-right"></i><i class="icon-cogs"></i>{% trans "Catalogues and brochures" %}</a>
+    </li>
+    <li {% ifequal request.current_page.id 18 %}class="active"{% endifequal %}>
+        <a href="/videos/"><i class="icon-chevron-right"></i><i class="icon-cogs"></i>{% trans "Videos" %}</a>
+    </li>
+    <li {% ifequal request.current_page.id 11 %}class="active"{% endifequal %}>
+        <a href="{% page_url 11 %}"><i class="icon-chevron-right"></i><i class="icon-cogs"></i>{% trans "Testimonies" %}</a>
+    </li>
+    <li>
+        <a href="{% page_url 23 %}listinfo/"><i class="icon-chevron-right"></i><i class="icon-cogs"></i>{% trans "Info request" %}</a>
+    </li>
+</ul>

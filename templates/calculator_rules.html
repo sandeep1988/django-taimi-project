@@ -1,0 +1,23 @@
+{% load i18n %}
+<div id="explaination">
+	
+    <h4>{% trans "About this calculator" %}</h4>
+    <p>
+        {% trans "Cost of swivels and hoses is based on average published list prices." %}
+        <br/>
+        {% blocktrans %}For the purpose of this calculator, a harvester head has 2 x 1" lines and 2 x 3/4'' lines, and a disc saw felling head has 5 x 3/4'' lines and 2 x 1'' lines.{% endblocktrans %}
+        <br/>
+        {% trans "It is estimated that replacing a hose on logging equipment will cause a 15 minute downtime on average at $200, or €200 per hour." %}
+        <br/>
+        {% trans "It is estimated that 0.25 gallons of oil is lost every time a hose is replaced. Price of hydraulic oil is estimated at $15 per gallon, or €8 per litre." %}
+        <br/>
+        {% trans "Cost of hose replacement due to twisting and wear is estimated at $0.50 or  €0.50 per hose, per hour without swivels, and $.10, or  €0.10 per  hour,per hose with swivels." %}
+    </p>
+
+    <p>
+        {% trans "This calculator is only intended to help users understand how various hydraulic setups can increase or decrease operation costs." %}
+        <br/>
+        {% trans "Results and actual savings may vary depending on: machine, operating pressure, operator, outside temperature and other factors." %}
+    </p>
+
+</div>

@@ -1,0 +1,8 @@
+{% load menu_tags %}
+{% for child in children %}
+{% if forloop.counter < 7 %}
+<li class="{% if child.selected %}current{% endif %}{% if child.ancestor %}current{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}">
+	<a href="{{ child.get_absolute_url }}" data-description="{% if child.page_instance.description %}{{ child.page_instance.description }}{% endif %}">{{ child.get_menu_title }}</a>
+</li>
+{% endif %}
+{% endfor %}

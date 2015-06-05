@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load menu_tags cms_tags i18n crispy_forms_tags nouvelles_tags %}
+
+{% block content %}
+		<h2 class="pageTitle">
+			{% page_attribute "page_title" %}
+		</h2>
+		<div class="row">
+			<div class="span4">
+				<ul id="servicesTab" class="nav nav-list sidenav">
+					<li{% if request.current_page.id == 3 %} class="active"{% endif %}>
+						<a href="/about/"><i class="icon-chevron-right"></i><i class="icon-cogs"></i>{% page_attribute "title" "about" %}</a>
+					</li>
+					{% show_menu_below_id "about" 0 100 100 100 "menu/sub_menu_about.html" %}
+				</ul>
+			</div>
+			<div class="span8">
+				{% placeholder "content_about" %}
+				{% placeholder "news" %}
+				{% eazisale_newsletters %}
+                <p style="margin-bottom:30px;">
+				{% trans "Get informations about our products, latest innovations and testimonies " %}<br/><strong>{% trans "by subscribing to our newletters :" %}</strong>
+				</p>
+				{% if subscribeForm.msg %}
+			    <div class="alert alert-{{subscribeForm.msg.alert}}">
+			    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+			    	<strong>{{subscribeForm.msg.title}}</strong> {{subscribeForm.msg.txt}}
+			    </div>
+				{% endif %}
+				{% crispy subscribeForm %}
+			</div>
+		</div>
+{% endblock %}

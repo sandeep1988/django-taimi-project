@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load menu_tags cms_tags i18n %}
+
+
+{% block content %}
+		<h2 class="pageTitle" style="color: #333333;font-family: 'Open Sans';font-size: 28px;font-weight: 300;">
+			{% trans "Advantages of using Taimi products" %}
+		</h2>
+		<div class="row">
+			<div class="span4">
+				<div class="well" style="overflow: hidden">
+					
+					{% placeholder "content_keys_benefits" %}
+					
+				</div>
+			</div>
+			<div class="span8">
+				
+				{% placeholder "content_advantages" %}
+				
+			</div>
+		</div>
+{% endblock %}

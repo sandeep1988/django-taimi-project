@@ -1,0 +1,20 @@
+{% load i18n %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html>
+	<head>
+		{% if newsletter %}<title>{{newsletter.title}}</title>{% endif %}
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div style="margin:20px auto 0; width:650px;">
+			{% if newsletter %}
+			{{newsletter.message_html|safe}}
+			{% else %}
+				{% if error %}
+					<p style="text-align:center;font-size:2em;">{{error}}</p>
+				{% else %}
+					<p style="text-align:center;font-size:2em;">{% trans "Newsletter not found" %}</p>
+				{% endif %}
+			{% endif %}
+		</div>
+	</body>
+</html>

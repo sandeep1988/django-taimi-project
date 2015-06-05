@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n menu_tags sekizai_tags cms_tags %}
+
+{% block content %}
+	<h1 class="pageTitle" style="color:#333;">
+		{% trans "Contact - Get in touch" %}
+	</h1>
+	<div class="row">
+			<div class="span8">
+				{% include "produits/customer_map.html" %}
+			</div>
+			<div class="span4">
+	
+				<address style="margin-bottom:15px;">
+					<strong>{% trans "Taimi Hydraulics administration" %}</strong><br/>
+					{{ client.address }} <br />{{ client.city }} ({{ client.province }}), <br />{{ client.country }}<br/>{{ client.postal_code  }}
+				</address>
+				<i class="icon-phone"></i>{{ client.phone }}<br>
+				{{ client.fax }}<br/>
+				<a href="mailto:{{ client.email }}"><i class="icon-envelope"></i>{{ client.email }}</a>
+				
+				<br/><br/>
+				<p>{% trans "For any enquiry, give us a call or contact us by sending an email. We aim to respond to all online enquiries within one working day." %}</p>
+				
+				<p><strong>{% trans "Opening hours" %}</h4>{% trans "- Time Zone EST (UTC/GMT -5 hours)" %}</strong></p>
+				{% trans "Monday to Thursday : 8:00 AM - 4:30 PM" %}<br/>
+				{% trans "Friday : 8:00 AM - 4:00 PM" %}<br/>
+				{% trans "Saturday and Sunday: CLOSED" %}
+				
+		</div>
+	</div>
+	<p>&nbsp;</p>
+	<h4 class="dark">{% trans "Please use the form below to send us an email." %}</h4>
+	<iframe style="width:100%;height:320px;margin-top:10px;" allow-forms="true" frameborder="0" name="contact" src="{% if request.LANGUAGE_CODE == 'fr' %}http://eazisale.com/formulaires/iframe/a87ff679a2f3e71d9181a67b7542122c/{% else %}http://eazisale.com/formulaires/iframe/c81e728d9d4c2f636f067f89cc14862c/{% endif %}"></iframe> 
+{% endblock %}

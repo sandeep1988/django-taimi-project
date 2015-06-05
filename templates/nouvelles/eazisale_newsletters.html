@@ -1,0 +1,23 @@
+{% load i18n %}
+<p>
+	<strong>{% trans "Newsletters:" %}</strong>
+</p>
+
+{% if newsletters %}
+<ul class="list">
+{% for newsletter in newsletters %}
+	<li>
+		<a href="{{newsletter.url}}" target="_blank">{{newsletter.title}}</a>
+	</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>
+	{% if error %}
+	{{error|safe}}
+	{% else %}
+	{% trans "No newsletters for now." %}
+	{% endif %}
+</p>
+{% endif %}
+<br/>

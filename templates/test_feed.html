@@ -1,0 +1,9 @@
+{% if news %}
+<ul style="margin-left:18px;">
+{% for new in news %}
+	<li>
+        {{ new.title }} ( {{ new.send_time }} )
+	</li>
+{% endfor %}
+</ul>
+{% endif %}
